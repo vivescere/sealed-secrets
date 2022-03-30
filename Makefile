@@ -111,7 +111,7 @@ vet:
 fmt:
 	$(GOFMT) -s -w $(GO_FILES)
 
-lint:
+lint: lint-gosec
 	 $(GOLANGCILINT) run --timeout=5m
 
 lint-gosec:
